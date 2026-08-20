@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const LuxeylineApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class LuxeylineApp extends StatelessWidget {
+  const LuxeylineApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'Luxeyline',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Roboto',
+        primaryColor: const Color(0xFF1B5E3C),
+        scaffoldBackgroundColor: Colors.white,
+        useMaterial3: true,
       ),
+      home: const SplashScreen(),
     );
   }
 }
